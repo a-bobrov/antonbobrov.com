@@ -1,5 +1,5 @@
 ---
-active: false
+active: flase
 widget: hero
 headless: true
 weight: 10
