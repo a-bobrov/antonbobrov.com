@@ -21,10 +21,10 @@ marketing:
     description: 'Research Assocaite at the Federal Reserve Bank of San Francisco'
     twitter: 'TonBobrov'
   analytics:
-    google_analytics: 'google-site-verification=EY3jukW2pXw-clbCtx95Roz4ZEdJhlka10zaUQOxf1s'
+    google_analytics: ''
     baidu_tongji: ''
   verification:
-    google: ''
+    google: 'google-site-verification=EY3jukW2pXw-clbCtx95Roz4ZEdJhlka10zaUQOxf1s'
     baidu: ''
 
 # Site header
