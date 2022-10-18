@@ -5,7 +5,7 @@ theme: "starter-hugo-academic"
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: Anton Bobrov # Website name
-baseURL: 'https://antonbobrov.com' # Website URL
+baseURL: 'https://antonbobrov.com/' # Website URL
 
 ############################
 ## LANGUAGE
