@@ -17,14 +17,14 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: 'Anton Bobrov'
+    org_name: ''
     description: 'Anton Bobrov Economics Research Associate at the Federal Reserve Bank of San Francisco'
     twitter: 'TonBobrov'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
   verification:
-    google: 'google-site-verification=EY3jukW2pXw-clbCtx95Roz4ZEdJhlka10zaUQOxf1s'
+    google: 'google-site-verification=tW-bzFSHk752za-qpy9mX1QukY8fC4zvKRKWPTSBk3I'
     baidu: ''
 
 # Site header
