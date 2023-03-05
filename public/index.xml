@@ -1,0 +1,1300 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anton Bobrov</title>
+    <link>https://antonbobrov.com/</link>
+      <atom:link href="https://antonbobrov.com/index.xml" rel="self" type="application/rss+xml" />
+    <description>Anton Bobrov</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://antonbobrov.com/media/icon_hu5190a7364f0047ce8cb98c5b9bd2778d_11811_512x512_fill_lanczos_center_3.png</url>
+      <title>Anton Bobrov</title>
+      <link>https://antonbobrov.com/</link>
+    </image>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>https://antonbobrov.com/talk/example-talk/</link>
+      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/talk/example-talk/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Wowchemy&amp;rsquo;s &lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Further event details, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page elements&lt;/a&gt; such as image galleries, can be added to the body of this page.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The cost of “peace” without a reformed Russia will weigh on the world for generations</title>
+      <link>https://antonbobrov.com/project/voxukraine-2022-04-04/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/project/voxukraine-2022-04-04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An Example of Linear Modeling in R</title>
+      <link>https://antonbobrov.com/project/stat151a/</link>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/project/stat151a/</guid>
+      <description>
+
+
+&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;i.-introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;I. Introduction&lt;/h2&gt;
+&lt;p&gt;Flight delays can be extremely frustrating, especially given the difficulty that consumers can face when trying to predict what factors might make a flight more or less delayed. Being able to predict how late a flight is based on a set of controllable factors would be extremely valuable. Hence, in this project we will attempt to create a model to predict flight delays, using a set of variables that could realistically be controlled by a prospective consumer.&lt;/p&gt;
+&lt;p&gt;We will be using the variables Month, Day, Day of the Week, Airline, Origin, Destination, Distance, Scheduled Departure. While this set contains observations from airports across the country, it does not seem reasonable to assume that a consumer could leave from any airport that they wanted. Hence, we will be using a subset of our original data set containing only flights from Oakland, San Francisco, and San Jose. While this limits the predictive power for non-Bay Area fliers, we hope that a similar model could be created to suit the needs of passengers leaving from other locations. Moreover, we will not be using all of the variables in our data set, instead opting to begin by modeling using the month, the day of the week, the airline being flown with, the origin airport (OAK, SFO, or SJC), the destination airport, the scheduled departure (in 24 hour time), and the distance being flown. Our thinking is that these are all variables that could be reasonably controlled by a consumer when choosing a flight.&lt;/p&gt;
+&lt;p&gt;Since our end-user is a traveler and not a government agency, only a subset of all the variables in our dataset is relevant to answering our research question. A is deciding where to book their ticket and from which airline to do so. They do not have access to information such as actual arrival times, taxi times, reasons for the delay, and other variables like such. A typical user will not have the ability nor the reason to consider these exogenous variables. Taxi time for example is a factor of how busy an airport is, how many planes are allowed in the sky at one time, the season, the weather, the economy, the number of operating airlines, proximity to a city, and various other factors that someone booking a trip will not go through the extreme research lengths to make a decision.&lt;/p&gt;
+&lt;p&gt;By regressing on the airport (both the destination and departure), we are implicitly able to capture these generalized variables. Likewise, variations in season and holidays are also implicitly captured by Month, Day, and Day of the week since our dataset is restricted to a single year.&lt;/p&gt;
+&lt;p&gt;Our report will be structured as follows. Section II will be devoted to a brief discussion of the data, its distributions, its limitations, and some transformations we will be applying to it. Section III will discuss our model, and how we came to it. Section IV will be devoted to testing our model and discussing our overall results. Finally, section V will be our conclusion, where we will discuss the results of this testing and possible next steps.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ii.-data-description&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;II. Data Description&lt;/h2&gt;
+&lt;p&gt;Our data is provided by the U.S. Department of Transportation (DOT). The DOT Bureau of Transportation Statistics tracks the on-time performance of domestic flights operated by large air carriers. Summary information on the number of on-time, delayed, canceled, and diverted flights are published in the DOT’s monthly Air Travel Consumer Report where this dataset of 2015 flight delays and cancellations is sourced. The original dataset contains nearly 6 million observations. While this may prove useful about establishing trends about airline on-time performance nationally, for the focus of this project we will only consider flights originating from the 3 major airports of the Bay Area: San Francisco International Airport (SFO), Oakland International Airport (OAK), and Norman Y. Mineta San Jose International Airport (SJC).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;iii.-data-cleaning-and-preprocessing&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;III. Data Cleaning and Preprocessing&lt;/h2&gt;
+&lt;p&gt;After extracting all the flight data from SFO, OAK, and SJO, we noticed that there are rows with missing values. This could potentially be the result of human error or data discrepancies across different airports or airlines. To mitigate this issue of regressing on missing values, we took the step of removing all rows with null or missing values. We then removed all the flights that are canceled since a canceled flight should not be part of the model predicting arrival delays. Lastly, we one-hot encoded all of our categorical variables from the last section, creating dummy variables for each airline, month, and day of the week.&lt;/p&gt;
+&lt;p&gt;Additionally, while this is technically data modification, it was in this step that we discovered that for whatever reason the DOT data that we acquired did not have correct departure airports for October (they were all given in the form of 5 digit numbers that we could not link to any airports). For that reason, October is not included in our analysis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;iv.-eda&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;IV. EDA&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;768&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We begin our EDA by looking at the distribution of flight delays. Immediately, we notice that our distribution is not at all symmetric, and thus some kind of data transformation will be required. For our purposes, we will use the log transformation, offsetting our data by &lt;span class=&#34;math inline&#34;&gt;\(+15\)&lt;/span&gt; within it to get rid of any negative values. All in all, our transformed arrival delay will look like the following:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y_i^*=\log(Y_i+15)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;After transformation, our data will look like the following. Additionally, we have included Q-Q plots before and after transformation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;768&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;While our data is still not perfectly symmetric, this transformation helps somewhat, and thus we will proceed with our analysis using exclusively transformed delays. We also made a point of looking at some of our bivariate distributions, of which we decided to highlight airline, month, and day Note that month and day are viewed as factor variables, as viewing them as a strictly continuous variable does not allow for variation outside of just an increasing number.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The following major airline carriers operated in 2015 from SFO, OAK, and SJC: US Airways (US), Delta Airlines (DL), American Airlines (AA), United Airlines (UA), Southwest Airlines (WN), JetBlue Airways (B6), Frontier Airlines (F9), Spirit Airlines (NK), Skywest Airlines (OO), Alaska Airlines (AS), Virgin America (VX), and Hawaiian Airlines (HA). Looking at each of the plots for their bivariate distribution with arrival delays, we can note that there seems to be some variation. Specifically, the boxplots reveal to us that HA (Hawaiian Airlines) seems to have far fewer delays on average than other airlines, with most other airlines looking fairly similar in terms of mean and spread. As for Day and Month, most of the days are fairly close in mean, except for December, which seems to have far more average delay than the other months. All in all, it seems worth including these variables in our model to better analyze these differences.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Finally, we can look at a subset of January to attempt to see the difference that time and day may have on flight delays. Looking at the figure above, we notice both peaks at certain times, as well as peaks on certain days (the 6th, the 11th, etc). This further motivates using scheduled departure as a variable in our model.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;v.-model-selection&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;V. Model Selection&lt;/h2&gt;
+&lt;p&gt;The variables that we will be including in our model selection are Month, Day, Day of the week, Airline, Origin, Destination, Distance, Scheduled Departure, and Scheduled Time (Total Trip Duration). Among them, Month, Day of Week, Airline, Origin, and Destination will all be treated as categorical variables (factors), creating a large number of dummy variables. From the exploratory data analysis done in the last section, we can determine it is unlikely that all of these variables will be of significance to our predictive model, therefore, we decided to conduct some forms of variable pruning.&lt;/p&gt;
+&lt;div id=&#34;lasso&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Lasso&lt;/h3&gt;
+&lt;p&gt;We performed a LASSO regression in order to prune out insignificant variables. LASSO optimizes the following:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat{\beta} = argmin_{\beta} ||y - X \beta ||^2 + \lambda \sum_{i=1}^n |\beta_i|\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Lasso regression penalizes large coefficients, and systematically drives insignificant coefficients to 0, effectively pruning them out of our model. Note that in a general LASSO regression, it is necessary to standardize the design matrix to avoid discrepancies in the magnitude of the coefficients. However, our data matrix is composed of only time-dates and categorical variables and not numerical continuous variables that would typically suffer from this procedure. Therefore, we do not need to worry about standardization.&lt;/p&gt;
+&lt;p&gt;To find the best lambda, we employ hyperparameter tuning through 10-fold cross-validation on our training dataset and subsequently choose the lambda with the lowest mean squared cross-validation error. The figure below shows the plot of cross-validation errors.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;vi.-results&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;VI. Results&lt;/h2&gt;
+&lt;div id=&#34;model-summary&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Model Summary&lt;/h3&gt;
+&lt;p&gt;The final fitted model that we used for this project is an Ordinary Least Squares model. Our final model has 26931 observations that it was fitted on from the train data. The intercept term is not easily interpretable because there is no default month or travel departure airport. The following are the statistically significant variables that our OLS model returns from the after variable selection in LASSO: &lt;em&gt;March, May, July, September, Sunday, Tuesday, Thursday, Friday, Frontier Airlines, JetBlue Airways, Hawaiian Airlines, Spirit Airlines, United Airlines, Virgin America, Southwest Airlines, SFO, ABQ, AATL, CLT, CMH, DCA, DTW, HDN, IAN, IND, JFK, MSP, ORD, PHL, PSC, RNO, SNA, SUN,&lt;/em&gt; and &lt;em&gt;Scheduled departure time&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The variables in a traveler’s control with the largest positive effect on travel delay are the month December, Spirit Airlines, flying to Columbus International Airport, and departing from SFO, with coefficients &lt;span class=&#34;math inline&#34;&gt;\(-1.338*10^{-1}, 1.641*10^{-1}, 7.75^*10^{-1}, 8.776*10^{-2}\)&lt;/span&gt;. That means that flying in December from SFO to Columbus on Spirit Airlines (if such a flight exists) will increase your travel delay by the respective listed values as percentages given all other variables are held constant. This makes sense. December in the United States is historically one of the busiest months to travel. Spirit Airlines is considered an ultra-low cost carrier traditionally with a mixed reputation. Columbus is located in Ohio which often suffers from harsh cold weather, especially during the peak travel season increasing the probability of magnitude of delay.&lt;/p&gt;
+&lt;p&gt;The variables in a traveler’s control with the largest negative effect on travel delay are the month of September, Hawaiian Airlines, flying to Friedman Memorial Airport in Blaine Idaho, from OAK, with coefficients &lt;span class=&#34;math inline&#34;&gt;\(-1.021e^{-1}, -1.415*10^{-1}, -3.392*10^{-1}\)&lt;/span&gt;. This means that flying in September from OAK to Blaine on Hawaiian (if such a flight exists) will decrease your travel delay by the respective listed values as percentages given all other variables are held constant. This also makes sense. September is not usually a month with peak travel volume and typically fair weather. Hawaiian Airlines flights largely to Hawaii which has fair weather year-round. I’ve never heard of Blaine Idaho before. It is a county with a population of ~21 thousand people, which should reduce the probability of delays.&lt;/p&gt;
+&lt;p&gt;It is worth noting that not all flight delays that can be predicted exist. For example, Hawaiian does not operate from OAK to Idaho. This should be considered whenever using our model.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;diagnostics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Diagnostics&lt;/h3&gt;
+&lt;p&gt;After using our LASSO regression for model selection, we fit an ordinary least squares regression (OLS) with only the variables with non-zero coefficients in the best model. Generally, refitting using no penalty after having done variable selection via the LASSO is considered “cheating” since you have already looked at the data and the resulting p-values and confidence intervals are not valid in the usual sense. This particular problem is discussed in the published research paper, “In defense of the Indefensible: A Very Naive approach to high-dimensional inference”, The authors conclude that given a large enough dataset and that our explanatory variables are deterministic, “peeking twice” at the data is acceptable. Thus, due to the composition of our design matrix, we can justify this design choice. LASSO, by construction, produces biased estimates for the coefficients, so we would like an unbiased estimate to have better accuracy and better interpretability in our final model. The scale of the delay time is extremely small in respect to the actual flight time, implying our margin for error is small. Flight times in hours yield regression coefficients of minutes or less. Even small bias introduced to the coefficients of our model may endanger the already limited interpretability of our coefficients.&lt;/p&gt;
+&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;768&#34; /&gt;
+&lt;p&gt;Looking at the figure above, we note the following. First, our plot reveals a significantly non-normal appearing distribution for our residuals. This would be problematic in the case that we wanted to perform inference on our coefficients, but given that we care singularly about prediction, this will not be a problem. Our plot reveals another problem. On the bottom left-hand corner of our model, we observe what seems to be a lower bound on our residuals that slopes down as our fitted values increase. This is likely due to an effective lower bound on Flight Delays. While there is technically no limit to how early our variables can be, there is no flight that arrives earlier than 15 min ahead of schedule, while many flights are significantly later than that. Again, while this would likely be a problem for inference, we are attempting prediction with our model, so it is not much of a concern. The plot shows no discernible trend in our standardized residuals, demonstrating relative homoscedasticity in the distribution of our data points. Finally, while there do seem to be a few points of higher leverage in the plot, we find no values with a Cook’s Distance of greater than &lt;span class=&#34;math inline&#34;&gt;\(0.5\)&lt;/span&gt;, indicating that there do not seem to be any large outliers in our data. Hence, we will not modify our data and proceed to fit and interpret our model as it stands.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;vii.-prediction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;VII. Prediction&lt;/h2&gt;
+&lt;p&gt;In our data processing phase, we made a point of setting aside a portion of our data to test our model’s predictive power. We can use this set, which includes &lt;span class=&#34;math inline&#34;&gt;\(8,977\)&lt;/span&gt; flights, to attempt to analyze the efficacy of our model. We can do this visually and by comparing the RMSE for both our test and training set. For our training data, we obtain an RMSE of &lt;span class=&#34;math inline&#34;&gt;\(\approx 0.6712\)&lt;/span&gt; and for our test data, we obtain a fairly similar number &lt;span class=&#34;math inline&#34;&gt;\(\approx 0.655\)&lt;/span&gt;. While these values are relatively close to each other and may seem small, it is worth noting that this is in log scale, and these values of RMSE are quite large on a logarithmic scale. This observation is confirmed upon further visual analysis, which gives us the following visualization.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Looking at the above graph, we do note a positive relationship between our actual transformed values and our predicted transformed values, but it is not nearly 1 to 1. More specifically, our model seems to have a great deal of difficulty predicting with higher delay.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;viii.-discussion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;VIII. Discussion&lt;/h2&gt;
+&lt;p&gt;Reflecting on the diagnostics and prediction section above, it is clear that our model suffers from some severe limitations. To begin, our model’s residuals are not at all normally distributed and possess both a light left-hand tail and a heavy right-hand tail, even after performing a log transformation. This limits our abilities to form normal confidence intervals from our model, thus limiting our abilities to perform inference. Outside of that, we also run into problems with performing prediction analysis using our model. Our model has an adjusted &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; of &lt;span class=&#34;math inline&#34;&gt;\(\approx 0.028\)&lt;/span&gt;, implying that only a small portion of the variation in flight delays is accounted for in our data. Moreover, both our test and training data possess fairly large RMSE, indicating a fairly large deviation between what our model predicts and what we see in the data.&lt;/p&gt;
+&lt;p&gt;All of this together means that our model is not well suited to predict flight delays. While this may seem disheartening after performing all of this analysis, it does give future research into this topic a leg up, as we have established that the variables we analyzed are not predictive of flight delays. Other variables not included with our data may aid with this process, including weather, the number of passengers booked for the flight, the model of the plane, the age of the plane, the price of the flight, and so on. Additionally, other models could likely be explored as well, including models that allow for more interaction between variables or even a multinomial or logistic model that would attempt to predict a degree of lateness, rather than a specific minute count.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ix.-conclusion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;IX. Conclusion&lt;/h2&gt;
+&lt;p&gt;Unfortunately, the predicting and inferential power of our model yielded limited results. The scale of predicting flight delays given information about origin airports, airlines, scheduled arrival times, and flight distances explains little of the variation in overall flight delays. Our findings suggest that our model could improve by introducing additional variables not present in our dataset. It is likely that factors such as the weather forecast for the time of the flight in both the departure and destination airports greatly influence the likelihood of a flight delay more so than most of the static variables in our model.&lt;/p&gt;
+&lt;p&gt;Additionally, fitting a linear regression may not have been the most appropriate application for answering the research question. We saw in our exploratory data analysis that the distribution of flight delays even after taking a log transformation is highly right-skewed. Unfortunately, this suggests that our model would not be able to account for the underlying nonlinearities. Moving forward it may be helpful to stratify the outcome variable into groups and predict the probabilities of on-time arrival, light delay, or heavy delay in a multinomial logistic regression model or through a nested regression model. It may be also helpful to analyze the nonlinearities in flight delays through other nonlinear methods such as polynomial regressions and regression splines. These models may be better equipped to handle the degree of heterogeneity present in our data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;x.-references&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;X. References&lt;/h2&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Zhao, Sen, et al. “In Defense of the Indefensible: A Very Naïve Approach to High-Dimensional Inference.” Statistical Science, vol. 36, no. 4, 2021, &lt;a href=&#34;https://doi.org/10.1214/20-sts815&#34; class=&#34;uri&#34;&gt;https://doi.org/10.1214/20-sts815&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Fox, John. Applied Regression Analysis and Generalized Linear Models. : SAGE Publications, 2008.&lt;/p&gt;
+&lt;p&gt;US Department of Transportation. (2017, February 9). 2015 Flight Delays and Cancellations (Version 1) [Dataset]. US Department of Transportation. &lt;a href=&#34;https://www.kaggle.com/usdot/flight-delays&#34; class=&#34;uri&#34;&gt;https://www.kaggle.com/usdot/flight-delays&lt;/a&gt;&lt;/p&gt;
+&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;xi.-appendix-all-code-for-this-report&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;XI. Appendix: All code for this report&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::opts_chunk$set(echo = TRUE)
+library(glmnet)
+library(dplyr)
+library(Rcpp)
+library(caret)
+library(ggplot2)
+library(MASS)
+library(gridExtra)
+library(lindia)
+library(latex2exp)
+library(lubridate)
+set.seed(69)
+flights &amp;lt;- na.omit(read.csv(&amp;quot;Bay_flights.csv&amp;quot;))
+regressors &amp;lt;- c(&amp;quot;ARRIVAL_DELAY&amp;quot;, &amp;quot;MONTH&amp;quot;, &amp;quot;DAY_OF_WEEK&amp;quot;, &amp;quot;AIRLINE&amp;quot;, 
+                &amp;quot;ORIGIN_AIRPORT&amp;quot;, &amp;quot;DESTINATION_AIRPORT&amp;quot;, 
+                &amp;quot;SCHEDULED_DEPARTURE&amp;quot;, &amp;quot;DISTANCE&amp;quot;)
+
+month_graph &amp;lt;- flights$MONTH
+
+day_graph &amp;lt;- flights$DAY_OF_WEEK
+
+airline_graph &amp;lt;- flights$AIRLINE
+
+destination_graph &amp;lt;- flights$DESTINATION_AIRPORT
+
+flights$MONTH &amp;lt;- as.factor(flights$MONTH)
+
+flights$DAY_OF_WEEK &amp;lt;- as.factor(flights$DAY_OF_WEEK)
+
+dummy &amp;lt;- dummyVars(&amp;quot; ~ .&amp;quot;, data = flights[,regressors])
+
+final_df &amp;lt;- data.frame(predict(dummy, newdata=flights[,regressors]))
+smp_size &amp;lt;- floor(0.6*nrow(flights))
+
+train_ind &amp;lt;- sample(seq_len(nrow(final_df)), size = smp_size)
+
+train_flights &amp;lt;- final_df[train_ind,]
+
+test_flights &amp;lt;- final_df[-train_ind,]
+#Include un-factored versions for graphing
+final_df$month_graph &amp;lt;- month_graph
+
+final_df$day_graph &amp;lt;- day_graph
+
+final_df$airline_graph &amp;lt;- airline_graph
+
+final_df$destination_graph &amp;lt;- destination_graph
+
+train_flights_graph &amp;lt;- final_df[train_ind,]
+
+test_flights_graph &amp;lt;- final_df[-train_ind,]
+ggplot(data = train_flights_graph) +
+  geom_histogram(aes(x = ARRIVAL_DELAY)) +
+  labs(title = &amp;quot;Histogram of Arrival Delays&amp;quot;, x = &amp;quot;Delay&amp;quot;, y = &amp;quot;Count&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;transformedhist &amp;lt;- ggplot(data = train_flights_graph) +
+  geom_histogram(aes(x = log(ARRIVAL_DELAY+15)) ) +
+  labs(title = &amp;quot;Histogram of Transformed Arrival Delays&amp;quot;, x = &amp;quot;Transformed Delay&amp;quot;, y = &amp;quot;Count&amp;quot;)
+
+delayqq &amp;lt;- ggplot(data = NULL) +
+  stat_qq(aes(sample = train_flights_graph$ARRIVAL_DELAY)) +
+  stat_qq_line(aes(sample = train_flights_graph$ARRIVAL_DELAY)) +
+  labs(title = &amp;quot;Delay Normal Q-Q&amp;quot;,
+       x = &amp;quot;Theoretical Quantiles&amp;quot;, y = &amp;quot;Sample Quantiles&amp;quot;)
+
+transformedqq &amp;lt;- ggplot(data = NULL) +
+  stat_qq(aes(sample = log(train_flights_graph$ARRIVAL_DELAY+15))) +
+  stat_qq_line(aes(sample = log(train_flights_graph$ARRIVAL_DELAY+15))) +
+  labs(title = &amp;quot;Transformed  Normal Q-Q&amp;quot;,
+       x = &amp;quot;Theoretical Quantiles&amp;quot;, y = &amp;quot;Sample Quantiles&amp;quot;)
+
+grid.arrange(transformedhist, delayqq, transformedqq, ncol = 3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Comparing Airlines
+US &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;US&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;US Airways&amp;quot;) +
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+DL &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;DL&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;Delta Air Lines&amp;quot;) +
+  theme(axis.text=element_text(size=6), 
+        axis.title=element_text(size=10))
+
+AA &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;AA&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;American Airlines&amp;quot;) +
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+UA &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;UA&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;United Airlines&amp;quot;) +
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+WN &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;WN&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;Southwest Airlines&amp;quot;) +
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+B6 &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;B6&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;JetBlue Airways&amp;quot;) +
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+F9 &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;F9&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;Frontier Airlines&amp;quot;) +
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+NK &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;NK&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;Spirit Airlines&amp;quot;)+
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+OO &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;OO&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;SkyWest Airlines&amp;quot;) +
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+AS &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;AS&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;Alaska Airlines&amp;quot;) +
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+VX &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;VX&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;Virgin America&amp;quot;) +
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+HA &amp;lt;- ggplot(data = train_flights_graph[train_flights_graph$airline_graph == &amp;quot;HA&amp;quot; ,]) + 
+  geom_histogram(aes(x = log(ARRIVAL_DELAY + 15))) +
+  xlab(&amp;quot;Hawaiian Airlines&amp;quot;) +
+  theme(axis.text=element_text(size=6),
+        axis.title=element_text(size=10))
+
+grid.arrange(US, DL, AA, UA, WN, B6, F9, NK, OO, AS, VX, HA, ncol = 4)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Boxplots
+months &amp;lt;- ggplot(data = train_flights_graph) + 
+  geom_boxplot(aes(y = log(ARRIVAL_DELAY + 15), 
+                   x = as.factor(month_graph)) ) + 
+  xlab(&amp;quot;Month&amp;quot;) + ylab(&amp;quot;Log (Arrival Delay + 15)&amp;quot;)
+
+days &amp;lt;- ggplot(data = train_flights_graph) + 
+  geom_boxplot(aes(y = log(ARRIVAL_DELAY + 15), x = as.factor(day_graph)) ) + 
+  xlab(&amp;quot;Day of Week&amp;quot;) + ylab(&amp;quot;Log (Arrival Delay + 15)&amp;quot;)
+
+airlines &amp;lt;- ggplot(data = train_flights_graph) + 
+  geom_boxplot(aes(y = log(ARRIVAL_DELAY + 15), x = as.factor(airline_graph))) + 
+  xlab(&amp;quot;Airline&amp;quot;) + ylab(&amp;quot;Log (Arrival Delay + 15)&amp;quot;) +
+  theme(axis.text=element_text(size=7),
+        axis.title=element_text(size=11))
+
+grid.arrange(months, days, airlines, ncol = 3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Scatterplot Time
+
+#generate noise
+noise_1 &amp;lt;- runif(nrow(train_flights_graph), min = -25, max = 25)
+noise_2 &amp;lt;- runif(nrow(train_flights_graph), min = -10, max = 10)
+
+ggplot(data = train_flights_graph, 
+       aes(y = log(ARRIVAL_DELAY + 15), x = DISTANCE + noise_1)) + 
+  geom_point(size = 0.25) + 
+  geom_smooth(method = &amp;quot;lm&amp;quot;, 
+              formula = y~x)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = train_flights_graph, 
+       aes(y = log(ARRIVAL_DELAY + 15), x = SCHEDULED_DEPARTURE + noise_1)) + 
+  geom_point(size = 0.25) + 
+  geom_smooth(method = &amp;quot;lm&amp;quot;, formula = y ~x)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = train_flights_graph, 
+       aes(y = log(ARRIVAL_DELAY + 15), 
+           x = SCHEDULED_DEPARTURE + noise_1, color = as.factor(month_graph))) + 
+  geom_point(size = 0.5) + 
+  geom_smooth(method = &amp;quot;lm&amp;quot;, formula = y ~x, se = FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Temporal Variability of Delay
+select_flights &amp;lt;-  flights[, c(&amp;quot;ARRIVAL_DELAY&amp;quot;, &amp;quot;YEAR&amp;quot;, &amp;quot;MONTH&amp;quot;, &amp;quot;DAY&amp;quot;, &amp;quot;SCHEDULED_DEPARTURE&amp;quot;)]
+
+
+select_flights$date &amp;lt;- make_datetime(year = select_flights$YEAR, 
+                                  month = select_flights$MONTH, 
+                                  day = select_flights$DAY, 
+                                  hour = select_flights$SCHEDULED_DEPARTURE %/% 100,
+                                  min = select_flights$SCHEDULED_DEPARTURE %% 100)
+
+
+ggplot(data = select_flights[select_flights$MONTH == 1 &amp;amp; 
+                               select_flights$DAY &amp;gt;= 1 &amp;amp; 
+                               select_flights$DAY &amp;lt;=15,  ], 
+       aes(x = date, y = log(ARRIVAL_DELAY+15))) + 
+    geom_line() + 
+    ylab(&amp;quot;Log Arrival Delay&amp;quot;) + xlab(&amp;quot;Date&amp;quot;) +
+    scale_x_datetime(breaks = scales::breaks_pretty(14)) +
+    theme(axis.text=element_text(size=7),
+      axis.title=element_text(size=11))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-8.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Cross Validation to find optimal lambda
+cv_model &amp;lt;- cv.glmnet(x = as.matrix(train_flights[-1]), y = log(train_flights[[1]]), alpha = 1)
+#using our optimized lambda from before to create a best lasso model
+best_lambda &amp;lt;- cv_model$lambda.min
+best_model &amp;lt;- glmnet(x = as.matrix(train_flights[-1]), y = log(train_flights[[1]] + 15), alpha = 1, lambda = best_lambda)
+
+#removing rows that are non-zero to extract our coefficients
+final_regressors &amp;lt;- rownames(coef(best_model))[coef(best_model)[ ,1] != 0][-1][-11]
+#creating a formula for using with lm
+regressors &amp;lt;- paste(final_regressors, collapse = &amp;quot; + &amp;quot;)
+
+lasso_formula &amp;lt;- as.formula(paste(&amp;quot;log(ARRIVAL_DELAY) ~ &amp;quot;, regressors, sep = &amp;quot;&amp;quot;))
+#lm with reduced set of coefficients
+final_model &amp;lt;-lm(data = train_flights, formula = lasso_formula)
+
+summary(final_model)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = lasso_formula, data = train_flights)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.5728 -0.5775 -0.1139  0.4786  3.4974 
+## 
+## Coefficients:
+##                          Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)             3.595e+00  3.126e-02 115.011  &amp;lt; 2e-16 ***
+## MONTH.1                -2.604e-02  1.785e-02  -1.459 0.144689    
+## MONTH.2                 2.223e-02  1.880e-02   1.182 0.237156    
+## MONTH.3                -3.833e-02  1.856e-02  -2.065 0.038936 *  
+## MONTH.5                -3.980e-02  1.749e-02  -2.275 0.022930 *  
+## MONTH.6                 1.831e-02  1.730e-02   1.058 0.289892    
+## MONTH.7                 5.127e-02  1.692e-02   3.030 0.002451 ** 
+## MONTH.9                -1.021e-01  2.044e-02  -4.996 5.90e-07 ***
+## MONTH.11               -2.889e-02  1.939e-02  -1.490 0.136262    
+## MONTH.12                1.388e-01  1.639e-02   8.466  &amp;lt; 2e-16 ***
+## DAY_OF_WEEK.1           4.326e-02  1.329e-02   3.254 0.001141 ** 
+## DAY_OF_WEEK.3          -4.836e-02  1.460e-02  -3.312 0.000926 ***
+## DAY_OF_WEEK.5           4.770e-02  1.356e-02   3.517 0.000437 ***
+## DAY_OF_WEEK.6          -3.000e-02  1.745e-02  -1.719 0.085545 .  
+## DAY_OF_WEEK.7           6.589e-02  1.360e-02   4.845 1.27e-06 ***
+## AIRLINEB6              -6.584e-02  3.019e-02  -2.181 0.029180 *  
+## AIRLINEF9               8.589e-02  4.278e-02   2.008 0.044703 *  
+## AIRLINEHA              -1.415e-01  4.841e-02  -2.923 0.003472 ** 
+## AIRLINENK               1.641e-01  5.285e-02   3.104 0.001912 ** 
+## AIRLINEOO              -4.990e-03  1.842e-02  -0.271 0.786499    
+## AIRLINEUA               3.238e-02  1.759e-02   1.841 0.065593 .  
+## AIRLINEUS              -3.110e-02  5.200e-02  -0.598 0.549727    
+## AIRLINEVX              -8.399e-02  2.250e-02  -3.732 0.000190 ***
+## AIRLINEWN              -8.093e-02  1.898e-02  -4.264 2.01e-05 ***
+## ORIGIN_AIRPORTOAK      -1.330e-02  1.570e-02  -0.847 0.397097    
+## ORIGIN_AIRPORTSFO       8.776e-02  1.519e-02   5.776 7.76e-09 ***
+## DESTINATION_AIRPORTABQ -1.078e-01  6.100e-02  -1.768 0.077074 .  
+## DESTINATION_AIRPORTASE  1.263e-01  1.237e-01   1.021 0.307372    
+## DESTINATION_AIRPORTATL -1.727e-01  4.620e-02  -3.739 0.000185 ***
+## DESTINATION_AIRPORTBNA -2.026e-01  1.537e-01  -1.318 0.187517    
+## DESTINATION_AIRPORTBOS  3.824e-02  3.833e-02   0.998 0.318429    
+## DESTINATION_AIRPORTBUR  3.588e-02  2.858e-02   1.256 0.209255    
+## DESTINATION_AIRPORTBWI -9.045e-02  7.825e-02  -1.156 0.247724    
+## DESTINATION_AIRPORTCLT -2.910e-01  7.051e-02  -4.127 3.69e-05 ***
+## DESTINATION_AIRPORTCMH  7.750e-01  1.995e-01   3.884 0.000103 ***
+## DESTINATION_AIRPORTCOS -7.178e-01  7.163e-01  -1.002 0.316293    
+## DESTINATION_AIRPORTDAL -5.263e-02  4.279e-02  -1.230 0.218675    
+## DESTINATION_AIRPORTDCA -1.871e-01  8.373e-02  -2.235 0.025443 *  
+## DESTINATION_AIRPORTDEN  1.459e-02  2.534e-02   0.576 0.564730    
+## DESTINATION_AIRPORTDFW  4.368e-02  3.025e-02   1.444 0.148695    
+## DESTINATION_AIRPORTDTW -3.341e-01  8.175e-02  -4.087 4.38e-05 ***
+## DESTINATION_AIRPORTFAT  9.160e-02  6.718e-02   1.364 0.172687    
+## DESTINATION_AIRPORTHDN -9.640e-01  5.067e-01  -1.902 0.057120 .  
+## DESTINATION_AIRPORTHOU -1.153e-01  8.637e-02  -1.335 0.181764    
+## DESTINATION_AIRPORTIAH -6.107e-02  3.227e-02  -1.892 0.058449 .  
+## DESTINATION_AIRPORTIND  2.435e-01  1.236e-01   1.970 0.048800 *  
+## DESTINATION_AIRPORTJAC  1.525e-01  1.127e-01   1.353 0.176016    
+## DESTINATION_AIRPORTJFK  1.112e-01  2.934e-02   3.790 0.000151 ***
+## DESTINATION_AIRPORTLAX -2.623e-02  1.653e-02  -1.587 0.112518    
+## DESTINATION_AIRPORTMCI -9.683e-02  6.684e-02  -1.449 0.147447    
+## DESTINATION_AIRPORTMCO -8.428e-02  7.844e-02  -1.074 0.282649    
+## DESTINATION_AIRPORTMFR -8.759e-02  5.491e-02  -1.595 0.110711    
+## DESTINATION_AIRPORTMMH  1.640e-01  1.920e-01   0.854 0.392989    
+## DESTINATION_AIRPORTMRY  1.074e-01  8.531e-02   1.258 0.208254    
+## DESTINATION_AIRPORTMSO  3.334e-01  2.392e-01   1.394 0.163432    
+## DESTINATION_AIRPORTMSP -1.629e-01  4.846e-02  -3.361 0.000778 ***
+## DESTINATION_AIRPORTOGG -3.647e-02  4.510e-02  -0.809 0.418712    
+## DESTINATION_AIRPORTONT  3.396e-02  3.035e-02   1.119 0.263154    
+## DESTINATION_AIRPORTORD -4.643e-02  2.607e-02  -1.781 0.074920 .  
+## DESTINATION_AIRPORTOTH  1.211e-01  9.944e-02   1.217 0.223431    
+## DESTINATION_AIRPORTPDX  1.764e-02  2.673e-02   0.660 0.509216    
+## DESTINATION_AIRPORTPHL -1.372e-01  5.480e-02  -2.504 0.012301 *  
+## DESTINATION_AIRPORTPIT -2.047e-01  1.503e-01  -1.362 0.173333    
+## DESTINATION_AIRPORTPSC  2.124e-01  1.127e-01   1.886 0.059372 .  
+## DESTINATION_AIRPORTPSP  4.915e-02  4.515e-02   1.089 0.276327    
+## DESTINATION_AIRPORTRDU  8.457e-02  9.616e-02   0.880 0.379118    
+## DESTINATION_AIRPORTRNO  9.940e-02  5.522e-02   1.800 0.071839 .  
+## DESTINATION_AIRPORTSAN  2.025e-02  2.174e-02   0.932 0.351558    
+## DESTINATION_AIRPORTSBA  5.243e-02  4.990e-02   1.051 0.293418    
+## DESTINATION_AIRPORTSEA -2.795e-02  2.167e-02  -1.290 0.197024    
+## DESTINATION_AIRPORTSLC  4.477e-02  2.978e-02   1.503 0.132781    
+## DESTINATION_AIRPORTSMF  6.143e-02  5.556e-02   1.106 0.268822    
+## DESTINATION_AIRPORTSNA -1.190e-01  2.713e-02  -4.386 1.16e-05 ***
+## DESTINATION_AIRPORTSUN -3.392e-01  1.273e-01  -2.664 0.007728 ** 
+## DESTINATION_AIRPORTXNA  3.448e-01  3.585e-01   0.962 0.336137    
+## SCHEDULED_DEPARTURE     5.147e-05  1.012e-05   5.085 3.69e-07 ***
+## DISTANCE               -9.587e-06  1.055e-05  -0.909 0.363518    
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 0.716 on 26854 degrees of freedom
+## Multiple R-squared:  0.03102,    Adjusted R-squared:  0.02828 
+## F-statistic: 11.31 on 76 and 26854 DF,  p-value: &amp;lt; 2.2e-16&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(cv_model)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-9.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;qqresid &amp;lt;- ggplot(data = NULL) + stat_qq(aes(sample = final_model$residuals)) +
+  stat_qq_line(aes(sample = final_model$residuals)) +
+  labs(title = &amp;quot;Residual Normal Q-Q&amp;quot;,
+       x = &amp;quot;Theoretical Quantiles&amp;quot;, y = &amp;quot;Sample Quantiles&amp;quot;)
+
+fittedresid &amp;lt;- ggplot(final_model) + 
+  geom_point(aes(x=.fitted, y=.resid), size = 0.5) +
+  labs(title = &amp;quot;Fitted Values vs. Residuals&amp;quot;, x = &amp;quot;Fitted Values&amp;quot;,
+       y = &amp;quot;Residuals&amp;quot;)
+
+scalelocation &amp;lt;- ggplot(final_model) + 
+  geom_point(aes(x=.fitted, y=sqrt(rstandard(final_model))), size = 0.5) + 
+  labs(title = &amp;quot;Scale Location&amp;quot;, x = &amp;quot;Fitted Values&amp;quot;, 
+       y = TeX(&amp;quot;$$\\sqrt{Standardized Residuals}$$&amp;quot;))
+
+leverage &amp;lt;- gg_resleverage(final_model, method = &amp;quot;loess&amp;quot;,
+                           se = FALSE, scale.factor = 1)
+
+grid.arrange(qqresid, fittedresid, scalelocation, leverage, ncol = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in sqrt(rstandard(final_model)): NaNs produced
+
+## Warning in sqrt(rstandard(final_model)): NaNs produced&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 14887 rows containing missing values (geom_point).&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 1 rows containing non-finite values (stat_smooth).&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 1 rows containing missing values (geom_point).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-10.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sum(cooks.distance(final_model) &amp;gt;= 0.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NA&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;predictions &amp;lt;- predict(final_model, newdata = test_flights)
+
+training_predictions &amp;lt;- predict(final_model, newdata = train_flights)
+
+RMSEtest &amp;lt;- sqrt(mean(((log(test_flights[,1]+15) - predictions)^2)))
+
+RMSEtraining &amp;lt;- sqrt(mean(((log(train_flights[,1]+15) - predictions)^2)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in log(train_flights[, 1] + 15) - predictions: longer object length is
+## not a multiple of shorter object length&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;prediction_df &amp;lt;- data.frame(log(test_flights[,1]+15) , predictions)
+
+colnames(prediction_df) &amp;lt;- c(&amp;quot;Actual&amp;quot;, &amp;quot;Predicted&amp;quot;)
+ggplot(data = prediction_df, aes(x = Actual, y = Predicted)) + geom_point() + 
+  geom_smooth(method = &amp;quot;lm&amp;quot;, se = FALSE) +
+  labs( x = &amp;quot;Actual Transformed Delay&amp;quot;,
+       y = &amp;quot;Predicted Transformed Delay&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://antonbobrov.com/project/stat151a/index_files/figure-html/unnamed-chunk-21-11.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Effectiveness of Quantitative Easing for Various Groups of Countries</title>
+      <link>https://antonbobrov.com/project/voxukraine-2021-07-06/</link>
+      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/project/voxukraine-2021-07-06/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Welcome to Wowchemy, the website builder for Hugo</title>
+      <link>https://antonbobrov.com/post/getting-started/</link>
+      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/post/getting-started/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;libr&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site&lt;/li&gt;
+&lt;li&gt;The template can be modified and customised to suit your needs. It&amp;rsquo;s a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a &lt;strong&gt;no-code solution (write in Markdown and customize with YAML parameters)&lt;/strong&gt; and having &lt;strong&gt;flexibility to later add even deeper personalization with HTML and CSS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/main/starters/academic/preview.png&#34; alt=&#34;The template is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 &lt;a href=&#34;https://wowchemy.com/templates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Create a new site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 &lt;a href=&#34;https://wowchemy.com/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Personalize your site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 &lt;a href=&#34;https://discord.gg/z8wNYzb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;Wowchemy community&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Hugo community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/wowchemy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@wowchemy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%23MadeWithWowchemy&amp;amp;src=typed_query&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithWowchemy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💡 &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-themes/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt; for &lt;em&gt;Wowchemy&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating Wowchemy?&lt;/strong&gt; View the &lt;a href=&#34;https://wowchemy.com/docs/hugo-tutorials/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Tutorial&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/h2&gt;
+&lt;p&gt;To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.&lt;/p&gt;
+&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-wowchemys-future-httpswowchemycomsponsor&#34;&gt;&lt;a href=&#34;https://wowchemy.com/sponsor/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;❤️ Click here to become a sponsor and help support Wowchemy&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock &lt;a href=&#34;https://wowchemy.com/sponsor/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/wowchemy/hugo-academic-cli&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Academic CLI&lt;/a&gt;:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or &lt;a href=&#34;https://wowchemy.com/user-stories/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with &lt;a href=&#34;https://wowchemy.com/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/docs/content/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://wowchemy.com/docs/content/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://wowchemy.com/docs/import/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://wowchemy.com/docs/install-locally/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://wowchemy.com/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 34+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Wowchemy and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/customization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-themes/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>https://antonbobrov.com/post/2020-12-01-r-rmarkdown/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      <guid>https://antonbobrov.com/post/2020-12-01-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Markdown&lt;/h1&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Including Plots&lt;/h1&gt;
+&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
+  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
+  init.angle = -50, border = NA
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://antonbobrov.com/post/2020-12-01-r-rmarkdown/index.en_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: A fancy pie chart.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Writing technical content in Markdown</title>
+      <link>https://antonbobrov.com/post/writing-technical-content/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/post/writing-technical-content/</guid>
+      <description>&lt;p&gt;Wowchemy is designed to give technical content creators a seamless experience. You can focus on the content and Wowchemy handles the rest.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Wowchemy.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
+&lt;p&gt;Wowchemy supports a Markdown extension for highlighting code syntax. You can customize the styles under the &lt;code&gt;syntax_highlighter&lt;/code&gt; option in your &lt;code&gt;config/_default/params.yaml&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```python
+import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandas&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read_csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;data.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;mindmaps&#34;&gt;Mindmaps&lt;/h3&gt;
+&lt;p&gt;Wowchemy supports a Markdown extension for mindmaps.&lt;/p&gt;
+&lt;p&gt;Simply insert a Markdown &lt;code&gt;markmap&lt;/code&gt; code block and optionally set the height of the mindmap as shown in the example below.&lt;/p&gt;
+&lt;p&gt;A simple mindmap defined as a Markdown list:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;
+&lt;code&gt;
+```markmap {height=&#34;200px&#34;}
+- Hugo Modules
+  - wowchemy
+  - wowchemy-plugins-netlify
+  - wowchemy-plugins-netlify-cms
+  - wowchemy-plugins-reveal
+```
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 200px;&#34;&gt;
+
+&lt;pre&gt;- Hugo Modules
+  - wowchemy
+  - wowchemy-plugins-netlify
+  - wowchemy-plugins-netlify-cms
+  - wowchemy-plugins-reveal&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A more advanced mindmap with formatting, code blocks, and math:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;
+&lt;code&gt;
+```markmap
+- Mindmaps
+  - Links
+    - [Wowchemy Docs](https://wowchemy.com/docs/)
+    - [Discord Community](https://discord.gg/z8wNYzb)
+    - [GitHub](https://github.com/wowchemy/wowchemy-hugo-themes)
+  - Features
+    - Markdown formatting
+    - **inline** ~~text~~ *styles*
+    - multiline
+      text
+    - `inline code`
+    -
+      ```js
+      console.log(&#39;hello&#39;);
+      console.log(&#39;code block&#39;);
+      ```
+    - Math: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+```
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 500px;&#34;&gt;
+
+&lt;pre&gt;- Mindmaps
+  - Links
+    - [Wowchemy Docs](https://wowchemy.com/docs/)
+    - [Discord Community](https://discord.gg/z8wNYzb)
+    - [GitHub](https://github.com/wowchemy/wowchemy-hugo-themes)
+  - Features
+    - Markdown formatting
+    - **inline** ~~text~~ *styles*
+    - multiline
+      text
+    - `inline code`
+    -
+      ```js
+      console.log(&#39;hello&#39;);
+      console.log(&#39;code block&#39;);
+      ```
+    - Math: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;charts&#34;&gt;Charts&lt;/h3&gt;
+&lt;p&gt;Wowchemy supports the popular &lt;a href=&#34;https://plot.ly/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotly&lt;/a&gt; format for interactive charts.&lt;/p&gt;
+&lt;p&gt;Save your Plotly JSON in your page folder, for example &lt;code&gt;line-chart.json&lt;/code&gt;, and then add the &lt;code&gt;{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code&gt; shortcode where you would like the chart to appear.&lt;/p&gt;
+&lt;p&gt;Demo:&lt;/p&gt;
+
+
+
+
+&lt;div id=&#34;chart-526341987&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;script&gt;
+  (function() {
+    let a = setInterval( function() {
+      if ( typeof window.Plotly === &#39;undefined&#39; ) {
+        return;
+      }
+      clearInterval( a );
+
+      Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
+        Plotly.plot(&#39;chart-526341987&#39;, chart.data, chart.layout, {responsive: true});
+      });
+    }, 500 );
+  })();
+&lt;/script&gt;
+
+&lt;p&gt;You might also find the &lt;a href=&#34;http://plotly-json-editor.getforge.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotly JSON Editor&lt;/a&gt; useful.&lt;/p&gt;
+&lt;h3 id=&#34;math&#34;&gt;Math&lt;/h3&gt;
+&lt;p&gt;Wowchemy supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.yaml&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;{{&amp;lt; math &amp;gt;}}$...${{&amp;lt; /math &amp;gt;}}&lt;/code&gt; or &lt;code&gt;{{&amp;lt; math &amp;gt;}}$$...$${{&amp;lt; /math &amp;gt;}}&lt;/code&gt;, respectively. (We wrap the LaTeX math in the Wowchemy &lt;em&gt;math&lt;/em&gt; shortcode to prevent Hugo rendering our math as Markdown. The &lt;em&gt;math&lt;/em&gt; shortcode is new in v5.5-dev.)&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{{&lt;/span&gt;&amp;lt; math &amp;gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gamma&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;_{n} &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\frac&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{ &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; | &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n} &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;^T &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; |}{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\|\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{x}_{n}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{x}_{n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\|&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$$&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{{&lt;/span&gt;&amp;lt; /math &amp;gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
+
+
+
+$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
+
+&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;{{&amp;lt; math &amp;gt;}}$\nabla F(\mathbf{x}_{n})${{&amp;lt; /math &amp;gt;}}&lt;/code&gt; renders as 
+
+$\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the math linebreak (&lt;code&gt;\\&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{{&lt;/span&gt;&amp;lt; math &amp;gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;k;p_{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{cases}p_{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &amp;amp; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\text&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{if }k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;p_{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &amp;amp; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\text&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{if }k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{cases}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$$&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{{&lt;/span&gt;&amp;lt; /math &amp;gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
+
+
+
+
+$$
+f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp; \text{if }k=1, \\
+1-p_{0}^{*} &amp; \text{if }k=0.\end{cases}
+$$
+
+
+&lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
+&lt;p&gt;Wowchemy supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
+&lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;graph TD
+A[Hard] --&gt;|Text| B(Round)
+B --&gt; C{Decision}
+C --&gt;|One| D[Result 1]
+C --&gt;|Two| E[Result 2]
+&lt;/div&gt;
+&lt;p&gt;An example &lt;strong&gt;sequence diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;sequenceDiagram
+Alice-&gt;&gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&gt;&gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&gt;&gt;Alice: Great!
+John-&gt;&gt;Bob: How about you?
+Bob--&gt;&gt;John: Jolly good!
+&lt;/div&gt;
+&lt;p&gt;An example &lt;strong&gt;Gantt diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+&lt;/div&gt;
+&lt;p&gt;An example &lt;strong&gt;class diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 &amp;lt;--&amp;gt; C2: Cool label
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;classDiagram
+Class01 &lt;|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --&gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 &lt;--&gt; C2: Cool label
+&lt;/div&gt;
+&lt;p&gt;An example &lt;strong&gt;state diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;stateDiagram
+[*] --&gt; Still
+Still --&gt; [*]
+Still --&gt; Moving
+Moving --&gt; Still
+Moving --&gt; Crash
+Crash --&gt; [*]
+&lt;/div&gt;
+&lt;h3 id=&#34;todo-lists&#34;&gt;Todo lists&lt;/h3&gt;
+&lt;p&gt;You can even write your todo lists in Markdown too:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;- [x]&lt;/span&gt; Write math example
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;- [x]&lt;/span&gt; Write diagram example
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Do something else
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write math example
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write diagram example&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Do something else&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tables&#34;&gt;Tables&lt;/h3&gt;
+&lt;p&gt;Save your spreadsheet as a CSV file in your page&amp;rsquo;s folder and then render it by adding the &lt;em&gt;Table&lt;/em&gt; shortcode to your page:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&amp;lt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;results.csv&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;header&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;caption&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Table 1: My results&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+&lt;table class=&#34;table&#34;&gt;
+  
+    
+    
+    &lt;tr&gt;  &lt;th&gt;customer_id&lt;/th&gt;  &lt;th&gt;score&lt;/th&gt;  &lt;/tr&gt;
+  
+  
+    &lt;tr&gt;
+      
+        
+          &lt;td data-table-dtype=&#34;number&#34;&gt;1&lt;/td&gt;
+        
+      
+        
+          &lt;td data-table-dtype=&#34;number&#34;&gt;0&lt;/td&gt;
+        
+      
+    &lt;/tr&gt;
+  
+    &lt;tr&gt;
+      
+        
+          &lt;td data-table-dtype=&#34;number&#34;&gt;2&lt;/td&gt;
+        
+      
+        
+          &lt;td data-table-dtype=&#34;text&#34;&gt;0.5&lt;/td&gt;
+        
+      
+    &lt;/tr&gt;
+  
+    &lt;tr&gt;
+      
+        
+          &lt;td data-table-dtype=&#34;number&#34;&gt;3&lt;/td&gt;
+        
+      
+        
+          &lt;td data-table-dtype=&#34;number&#34;&gt;1&lt;/td&gt;
+        
+      
+    &lt;/tr&gt;
+  
+  
+    &lt;caption&gt;Table 1: My results&lt;/caption&gt;
+  
+&lt;/table&gt;
+
+&lt;h3 id=&#34;callouts&#34;&gt;Callouts&lt;/h3&gt;
+&lt;p&gt;Academic supports a &lt;a href=&#34;https://wowchemy.com/docs/content/writing-markdown-latex/#callouts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcode for callouts&lt;/a&gt;, also referred to as &lt;em&gt;asides&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;. By wrapping a paragraph in &lt;code&gt;{{% callout note %}} ... {{% /callout %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{% callout note %}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{% /callout %}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;spoilers&#34;&gt;Spoilers&lt;/h3&gt;
+&lt;p&gt;Add a spoiler to a page to reveal text, such as an answer to a question, after a button is clicked.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;spoiler&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Click to view the spoiler&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You found me!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;spoiler&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-6&#34;&gt;
+  &lt;summary&gt;Click to view the spoiler&lt;/summary&gt;
+  &lt;p&gt;You found me!&lt;/p&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;icons&#34;&gt;Icons&lt;/h3&gt;
+&lt;p&gt;Academic enables you to use a wide range of &lt;a href=&#34;https://wowchemy.com/docs/getting-started/page-builder/#icons&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;icons from &lt;em&gt;Font Awesome&lt;/em&gt; and &lt;em&gt;Academicons&lt;/em&gt;&lt;/a&gt; in addition to &lt;a href=&#34;https://wowchemy.com/docs/content/writing-markdown-latex/#emojis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;emojis&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here are some examples using the &lt;code&gt;icon&lt;/code&gt; shortcode to render icons:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;icon&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;terminal&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;pack&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fas&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}} Terminal  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;icon&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;python&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;pack&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fab&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}} Python  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;icon&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;r-project&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;pack&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fab&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}} R
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-terminal  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Terminal&lt;br&gt;
+
+  &lt;i class=&#34;fab fa-python  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Python&lt;br&gt;
+
+  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; R&lt;/p&gt;
+&lt;h3 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example preprint / working paper</title>
+      <link>https://antonbobrov.com/publication/preprint/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/publication/preprint/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Display Jupyter Notebooks with Academic</title>
+      <link>https://antonbobrov.com/post/jupyter/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/post/jupyter/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;IPython.core.display&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Welcome to Academic!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Welcome to Academic!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;install-python-and-jupyterlab&#34;&gt;Install Python and JupyterLab&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Install Anaconda&lt;/a&gt; which includes Python 3 and JupyterLab.&lt;/p&gt;
+&lt;p&gt;Alternatively, install JupyterLab with &lt;code&gt;pip3 install jupyterlab&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
+&lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY-WEBSITE-FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;SHORT-POST-TITLE&amp;gt;&lt;/code&gt; with the file path to your Academic website folder and a short title for your blog post (use hyphens instead of spaces), respectively:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jupyter lab index.ipynb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;jupyter&lt;/code&gt; command above will launch the JupyterLab editor, allowing us to add Academic metadata and write the content.&lt;/p&gt;
+&lt;h2 id=&#34;edit-your-post-metadata&#34;&gt;Edit your post metadata&lt;/h2&gt;
+&lt;p&gt;The first cell of your Jupter notebook will contain your post metadata (&lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;front matter&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In Jupter, choose &lt;em&gt;Markdown&lt;/em&gt; as the type of the first cell and wrap your Academic metadata in three dashes, indicating that it is YAML front matter:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: My post&amp;#39;s title
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date: 2019-09-01
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Put any other Academic metadata here...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Edit the metadata of your post, using the &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; as a guide to the available options.&lt;/p&gt;
+&lt;p&gt;To set a &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&amp;rsquo;s folder.&lt;/p&gt;
+&lt;p&gt;For other tips, such as using math, see the guide on &lt;a href=&#34;https://wowchemy.com/docs/content/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;writing content with Academic&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>https://antonbobrov.com/slides/example/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/slides/example/</guid>
+      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-wowchemy&#34;&gt;Create slides in Markdown with Wowchemy&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wowchemy&lt;/a&gt; | &lt;a href=&#34;https://wowchemy.com/docs/content/slides/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://revealjs.com/pdf-export/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Code block:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;porridge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;blueberry&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;porridge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;blueberry&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Eating...&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;p&gt;$$
+f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{% fragment %}} One {{% /fragment %}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{% fragment %}} **Two** {{% /fragment %}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{% fragment %}} Three {{% /fragment %}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+  One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+  &lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+  Three
+&lt;/span&gt;
+&lt;hr&gt;
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{% speaker_note %}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Only the speaker can read these notes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Press &lt;span class=&#34;sb&#34;&gt;`S`&lt;/span&gt; key to view
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  {{% /speaker_note %}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/aside&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;/media/boards.jpg&#34;
+  &gt;
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;slide&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;background-image&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/media/boards.jpg&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;slide&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;background-color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#0000FF&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;slide&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;my-style&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;reveal&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;section&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;reveal&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;section&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;h2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;reveal&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;section&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;h3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;navy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://discord.gg/z8wNYzb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/content/slides/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example journal article</title>
+      <link>https://antonbobrov.com/publication/journal-article/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/publication/journal-article/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example conference paper</title>
+      <link>https://antonbobrov.com/publication/conference-paper/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/publication/conference-paper/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://antonbobrov.com/admin/config.yml</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://antonbobrov.com/admin/config.yml</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
