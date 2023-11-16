@@ -20,10 +20,6 @@ feature:
     icon: r-project
     icon_pack: fab
     name: R
-  # - description: 
-  #   icon: chart-line
-  #   icon_pack: fas
-  #   name: Stata
   - description: 
     icon: python
     icon_pack: fab
@@ -32,7 +28,6 @@ feature:
     icon: stata
     icon_pack: custom
     name: Stata
-    description:    
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
 #  icon_pack: "emoji"
