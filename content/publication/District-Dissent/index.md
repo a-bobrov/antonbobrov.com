@@ -1,6 +1,6 @@
 ---
 title: "Regional Dissent: Local Economic Conditions Influence FOMC Votes"
-date: 2023-10-16
+date: 2024-02-16
 publishDate: 2023-10-16T20:13:52.623034Z
 authors: ["Anton Bobrov", "Rupal Kamdar" "Mauricio Ulate"]
 publication_types: ["2"]
