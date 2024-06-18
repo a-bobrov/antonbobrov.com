@@ -10,15 +10,15 @@ last_name: Bobrov
 superuser: true
 
 # Short bio (displayed in user profile at end of posts)
-bio: Welcome to my website! I am a research associate at the Federal Reserve Bank of San Francisco. My current interests are in Macroeconomics and pursuing graduate studies.
+bio: Thanks for vising my website!
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: Federal Reserve Bank of San Francisco
-  url: https://www.frbsf.org/
+- name: University of Michigan
+  url: https://lsa.umich.edu/econ/
 
 # Position
-role: Research Associate
+role: PhD Student
   
 # Education to show in About Widget  
 education:
@@ -59,7 +59,7 @@ social:
 ---
 
 
-👋 Welcome to my website! I am a research associate at the Federal Reserve Bank of San Francisco. My current interests are in Macroeconomics and pursuing graduate studies.
+👋 Welcome to my website! I am an Economics PhD Student at the University of Michigan. Check out some of the things I've been working on below. 
 
 
 
