@@ -24,7 +24,7 @@ date_format: Jan 2006
 experience:
 
   - title: PhD Student 
-    company: University of Michigan
+    company: Department of Economics, University of Michigan
     company_url: 'https://lsa.umich.edu/econ'
     company_logo: Michigan_Wolverines_logo
     location: Ann Arbor, MI
