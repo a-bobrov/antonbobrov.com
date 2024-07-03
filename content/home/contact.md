@@ -25,7 +25,6 @@ content:
       captcha: false
 
   # Contact details (edit or remove options as required)
-  phone: 415 977 3591
 
 design:
   columns: '2'
