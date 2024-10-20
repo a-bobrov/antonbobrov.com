@@ -9,5 +9,5 @@ featured: true
 publication: "Working Paper"
 links: 
 - name: PDF
-  url: https://rupalkamdar.github.io/pdfs/districtdissent.pdf
+  url: https://github.com/a-bobrov/antonbobrov.com/tree/main/content/publication/District-Dissent/District_Dissent.pdf
 ---
