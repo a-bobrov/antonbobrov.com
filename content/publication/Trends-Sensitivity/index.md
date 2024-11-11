@@ -1,6 +1,6 @@
 ---
 title: "The Beginning of the Trend: Interest Rates, Profits, and Markups"
-date: 2023-10-16
+date: 2024-09-30
 publishDate: 2023-10-16T20:13:52.623034Z
 authors: ["Anton Bobrov", "James Traina"]
 publication_types: ["2"]
