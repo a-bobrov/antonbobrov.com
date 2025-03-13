@@ -34,7 +34,7 @@ experience:
   - title: Research Associate
     company: Federal Reserve Bank of San Francisco
     company_url: 'https://www.frbsf.org/'
-    company_logo: sffed_icon
+    company_logo: FRBSF
     location: San Francisco, CA
     date_start: '2022-06-06'
     date_end: '2024-06-28'
