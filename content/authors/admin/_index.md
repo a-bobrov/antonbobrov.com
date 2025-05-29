@@ -36,8 +36,8 @@ highlight_name: true
 
 interests:
 - Empirical Macroeconomics
-- Industrial Organization
-- International Macroeconomics
+- International Economics
+- Finance 
 - Statistical Learning
 
 #Social/Academic Networking
