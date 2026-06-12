@@ -28,6 +28,10 @@ feature:
     icon: stata
     icon_pack: custom
     name: Stata
+  - description:
+    icon: claude
+    icon_pack: custom
+    name: Agents
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
 #  icon_pack: "emoji"

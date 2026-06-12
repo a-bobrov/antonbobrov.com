@@ -23,10 +23,10 @@ role: PhD Student
 # Education to show in About Widget  
 education:
   courses:
-  - course: BA in Economics
-    institution: University of California, Berkeley
-    year: 2022
-  - course: BA in Statistics
+  - course: MA in Economics
+    institution: University of Michigan
+    year: 2026
+  - course: BA in Economics and Statistics
     institution: University of California, Berkeley
     year: 2022
     
